@@ -1,0 +1,17 @@
+﻿.container {
+    background-color: brown;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+
+}
+.description {
+    font-size: 10px;
+    color:gray;
+}
