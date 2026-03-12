@@ -6,8 +6,10 @@ import './index.css'
 // import Secondquestion from './components/Secondquestion'
 // import Thirdquestion from './components/Thirdquestion'
 // import Fourquestion from './components/Fourquestion'
-import Fivequestion from './components/Fivequestion'
-
+// import Fivequestion from './components/Fivequestion'
+// import Sixquestion from './components/Sixquestion'
+// import Eightquestion from './components/Eightquestion'
+import Sevenquestion from './components/Sevenquestion'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
@@ -16,8 +18,12 @@ createRoot(document.getElementById('root')).render(
   {/* <Thirdquestion/>
    */}
    {/* <Fourquestion/> */}
-   <Fivequestion/>
-  </StrictMode>,
+   {/* <Fivequestion/> */}
+   {/* <Sixquestion/> */}
+
+   {/* <Eightquestion/> */}
+   <Sevenquestion/>
+  </StrictMode>
 )
 
 // 1.

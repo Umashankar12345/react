@@ -5,13 +5,14 @@
 
 
 import React, { useState } from 'react'
+
+function Fivequestion() {
 const[color , setColor] = useState("white");
 const changeColor = () => {
     const newColor = color === "white" ? "lightblue" : "white";
     setColor(newColor);
     document.body.style.backgroundColor = newColor;
   };
-function Fivequestion() {
   return (
     <div>
       <h2>color:{color}</h2>
