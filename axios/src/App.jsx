@@ -1,5 +1,7 @@
 // import { useState } from 'react';
 
+//import AxiosTutorial from "./AxiosTutorial";
+
 // import './App.css';
 // import axios from 'axios';
 
@@ -35,13 +37,14 @@
 // Use useEffect.
 
 // import getdata from './getdata';
-import PostData from "./postdata";
+import AxiosPost from "./AxiosPost";
+import AxiosTutorial from "./AxiosTutorial";
+//import PostData from "./postdata";
 function App() {
   return(
     <div>
-      <h2>user List</h2>
-      {/* <getdata/> */}
-      <PostData/>
+
+    <AxiosPost/>
     </div>
   );
 }
