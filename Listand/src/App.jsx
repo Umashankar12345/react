@@ -4,21 +4,30 @@ import './App.css'
 
 function App() {
 
-  const[Morning, setMorning] = useState("Morning")
+//   const[Morning, setMorning] = useState("Morning")
 
-const toggleGreeting = () => {
-  if(Morning === "Morning"){
-    setMorning("Evening")
-  }else{
-    setMorning("Morning");
-  }
-};
-return(
-  <div>
-  <h1>Good {Morning}</h1>
-  <button onClick={toggleGreeting}>Toogle</button>
-  </div>
-)
+// const toggleGreeting = () => {
+//   if(Morning === "Morning"){
+//     setMorning("Evening")
+//   }else{
+//     setMorning("Morning");
+//   }
+// };
+// return(
+//   <div>
+//   <h1>Good {Morning}</h1>
+//   <button onClick={toggleGreeting}>Toogle</button>
+//   </div>
+// )
+ const [name, setName] = useState("");
+
+  return (
+    <div>
+      <input onChange={(e)=>setName(e.target.value)} />
+      <h3>{name}</h3>
+      <button onClick={()=>setName("")}>Reset</button>
+    </div>
+  );
   // const[cart , setCart] = useState([]);
   // const items = [
   //   {id: 1 , name: "Apple" , price: 1.5},
