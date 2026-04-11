@@ -4,19 +4,55 @@ import './App.css'
 
 function App(){
   //Event Handler (Update state on input change)
-  const[value , setValue] = useState("");
+  // const[value , setValue] = useState("");
 
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  }
-  return(
-    <div>
-      <input type="text" value={value} onChange={handleChange} />
-      <h3>{value}</h3>
-      <button>Click Me</button>
-    </div>
-  )
+  // const handleChange = (e) => {
+  //     e.preventDefault(); // important
+  //   alert("Name: " + name);
+  //   setValue(e.target.value);
 
+  // }
+  // return(
+  //   <div>
+  //     <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
+  //     <h3>{value}</h3>
+  //     <button>Click Me</button>
+  //   </div>
+  // )
+                    //seform
+        const [form , setform] = useState({
+          name: " ",
+          email: " ",
+          password: "",
+          contact: " "
+        });
+        const handleChange = (e) => {
+          setform({
+            ...form , [e.target.name] : e.target.value
+          });
+        }
+        const handleSubmit = (e) => {
+          e.preventDefault();
+          console.log(form);
+          alert("form successfully submitted");
+          alert(`Name: ${form.name} \nEmail: ${form.email} \nPassword: ${form.password} \nContact: ${form.contact}`);
+
+        }
+        return(
+          <div>
+            <form onSubmit={handleSubmit}>
+
+              <input type="text" name = "name" value = {form.name} placeholder="Name" onChange={(e) =>setform({...form,name:[e.target.value] })} />
+              <input type="email" name = "email" value = {form.email} placeholder="Email" onChange={handleChange} />
+              <input type="password" name = "password" value = {form.password} placeholder="Password" onChange={handleChange} />
+              <input type="text" name = "contact" value = {form.contact} placeholder="Contact" onChange={handleChange} />
+              <button type="submit">Submit</button>
+
+            </form>
+            
+          </div>
+        )
+    //state toggle    
   //const[morning , setMorning] = useState("Morning");
   
   // const Toggle = () => {
