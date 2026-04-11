@@ -1,8 +1,28 @@
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 import  React from 'react'
 import './App.css'
 
 function App() {
+
+ // Timer
+
+ const[time , setTime] = useState(0);
+
+ useEffect(() => {
+  const interval = setInterval(() => {
+    setTime((prev) => prev + 1);
+  } , 1000);
+
+  return() => clearInterval(interval);
+ },[]);
+
+ return(
+  <div>
+    <h1>Time:{time}</h1>
+    <button onClick={() => setTime(0)}>Start</button>
+  </div>
+ )
+
 
 //   const[Morning, setMorning] = useState("Morning")
 
@@ -19,15 +39,6 @@ function App() {
 //   <button onClick={toggleGreeting}>Toogle</button>
 //   </div>
 // )
- const [name, setName] = useState("");
-
-  return (
-    <div>
-      <input onChange={(e)=>setName(e.target.value)} />
-      <h3>{name}</h3>
-      <button onClick={()=>setName("")}>Reset</button>
-    </div>
-  );
   // const[cart , setCart] = useState([]);
   // const items = [
   //   {id: 1 , name: "Apple" , price: 1.5},
