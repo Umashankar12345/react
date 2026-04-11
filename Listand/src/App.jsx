@@ -4,41 +4,56 @@ import './App.css'
 
 function App() {
 
-  const[cart , setCart] = useState([]);
-  const items = [
-    {id: 1 , name: "Apple" , price: 1.5},
-    {id: 2 , name: "Banana" , price: 0.8},
-    {id: 3 , name: "orange" , price: 4.8},
-    {id: 4 , name: "grapes" , price: 7.9},
-  ];
+  const[Morning, setMorning] = useState("Morning")
 
-  const addToCart = (product) => {
-    setCart([...cart , product]);
-  };
+const toggleGreeting = () => {
+  if(Morning === "Morning"){
+    setMorning("Evening")
+  }else{
+    setMorning("Morning");
+  }
+};
+return(
+  <div>
+  <h1>Good {Morning}</h1>
+  <button onClick={toggleGreeting}>Toogle</button>
+  </div>
+)
+  // const[cart , setCart] = useState([]);
+  // const items = [
+  //   {id: 1 , name: "Apple" , price: 1.5},
+  //   {id: 2 , name: "Banana" , price: 0.8},
+  //   {id: 3 , name: "orange" , price: 4.8},
+  //   {id: 4 , name: "grapes" , price: 7.9},
+  // ];
 
-  const removeFromCart = (product) => {
-    setCart(cart.filter((_ , index)  => index != indexToRemove));
-  };
-  return(
-    <div style={{padding: '30px'}}>
-        <h1>My Shopping Cart</h1>
-        {items.map((item)=> (
-          <button key= {item.id} onClick={() => addToCart(item)}>Add{item.name} (${item.price})</button>
-        ))}
+  // const addToCart = (product) => {
+  //   setCart([...cart , product]);
+  // };
 
-        <h2>Your cart({cart.length})</h2>
-        <ul>
-          {cart.map((item, index) => (
-            <li key={index}>
-              {item.name} - ${item.price}
-              <button onClick={()=> removeFromCart(index)}>Remove </button>
-            </li>
-          ))}
-        </ul>
+  // const removeFromCart = (product) => {
+  //   setCart(cart.filter((_ , index)  => index != indexToRemove));
+  // };
+  // return(
+  //   <div style={{padding: '30px'}}>
+  //       <h1>My Shopping Cart</h1>
+  //       {items.map((item)=> (
+  //         <button key= {item.id} onClick={() => addToCart(item)}>Add{item.name} (${item.price})</button>
+  //       ))}
 
-        <h3>Total price: ${cart.reduce((total, item) => total + item.price, 0).toFixed(2)}</h3>
-    </div>
-  )
+  //       <h2>Your cart({cart.length})</h2>
+  //       <ul>
+  //         {cart.map((item, index) => (
+  //           <li key={index}>
+  //             {item.name} - ${item.price}
+  //             <button onClick={()=> removeFromCart(index)}>Remove </button>
+  //           </li>
+  //         ))}
+  //       </ul>
+
+  //       <h3>Total price: ${cart.reduce((total, item) => total + item.price, 0).toFixed(2)}</h3>
+  //   </div>
+  // )
 
   //const IPL = ['CSk' , 'mumabi' , 'RCB' , 'punjab']
     // const Name = ['uma' , 'shankar' , 'dhiraj' , 'kumar']
