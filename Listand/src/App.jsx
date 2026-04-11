@@ -1,27 +1,73 @@
-import { useState , useEffect } from 'react'
+import { useState } from 'react'
 import  React from 'react'
 import './App.css'
 
-function App() {
+function App(){
+  const[userLogin , setUserLogin ] = useState(false);
 
+  const Toggle = () => {
+      if(userLogin){
+        setUserLogin(false);
+      }else{
+        setUserLogin(true);
+      }
+  }
+  return(
+    <div>
+       <h2>{userLogin ? "Logged In" : "Logged Out"}</h2>
+      <button onClick={Toggle}>toggleButton</button>
+    </div>
+  )
+}
+//function App({Products}) {
+// const[category , setCategory] = useState("");
+
+// const getFilteredProducts = () => {
+//   if (!Products) return []; 
+//   if(category === "") return Products;
+
+//   return Products.filter((p) => p.category === category)
+// }
+
+// return(
+//   <div>
+//     <select 
+//     value={category} 
+//     onChange={(e) => setCategory(e.target.value)}>
+
+//       <option value=""> All</option>
+//       <option value="Electronics">Electronics</option>
+//       <option value="Clothing">Cloth</option>
+
+//     </select>
+
+//     <button onClick={() => setCategory("")}>Reset</button>
+
+//     {getFilteredProducts().map((p , i) => (
+//       <p key={i}>{p.name}</p>
+//     ))}
+//   </div>
+// )
+// };
+  
  // Timer
 
- const[time , setTime] = useState(0);
+//  const[time , setTime] = useState(0);
 
- useEffect(() => {
-  const interval = setInterval(() => {
-    setTime((prev) => prev + 1);
-  } , 1000);
+//  useEffect(() => {
+//   const interval = setInterval(() => {
+//     setTime((prev) => prev + 1);
+//   } , 1000);
 
-  return() => clearInterval(interval);
- },[]);
+//   return() => clearInterval(interval);
+//  },[]);
 
- return(
-  <div>
-    <h1>Time:{time}</h1>
-    <button onClick={() => setTime(0)}>Start</button>
-  </div>
- )
+//  return(
+//   <div>
+//     <h1>Time:{time}</h1>
+//     <button onClick={() => setTime(0)}>Start</button>
+//   </div>
+//  )
 
 
 //   const[Morning, setMorning] = useState("Morning")
@@ -137,6 +183,6 @@ function App() {
 //  </div>
 
 //   )
-}
+
 
 export default App
