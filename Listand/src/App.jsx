@@ -3,22 +3,53 @@ import  React from 'react'
 import './App.css'
 
 function App(){
-  const[userLogin , setUserLogin ] = useState(false);
+  //Event Handler (Update state on input change)
+  const[value , setValue] = useState("");
 
-  const Toggle = () => {
-      if(userLogin){
-        setUserLogin(false);
-      }else{
-        setUserLogin(true);
-      }
+  const handleChange = (e) => {
+    setValue(e.target.value);
   }
   return(
     <div>
-       <h2>{userLogin ? "Logged In" : "Logged Out"}</h2>
-      <button onClick={Toggle}>toggleButton</button>
+      <input type="text" value={value} onChange={handleChange} />
+      <h3>{value}</h3>
+      <button>Click Me</button>
     </div>
   )
-}
+
+  //const[morning , setMorning] = useState("Morning");
+  
+  // const Toggle = () => {
+  //   if(morning){
+  //     setMorning("Evening");
+  //   }else{
+  //     setMorning("Morning");
+  //   }
+  // }
+  // return(
+  //   <div>
+  //     <h1>Good {morning}</h1>
+  //     <button onClick={Toggle}>chhoti</button>
+  //   </div>
+  // )
+
+
+//   const[userLogin , setUserLogin ] = useState(false);
+
+//   const Toggle = () => {
+//       if(userLogin){
+//         setUserLogin(false);
+//       }else{
+//         setUserLogin(true);
+//       }
+//   }
+//   return(
+//     <div>
+//        <h2>{userLogin ? "Logged In" : "Logged Out"}</h2>
+//       <button onClick={Toggle}>toggleButton</button>
+//     </div>
+//   )
+ }
 //function App({Products}) {
 // const[category , setCategory] = useState("");
 
