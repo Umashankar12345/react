@@ -1,7 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './components/Counter'
+// import App from './components/Counter'
+import Toggle from './components/Toggle'
 // import Onequestion from './components/Onequestion'
 // import Secondquestion from './components/Secondquestion'
 // import Thirdquestion from './components/Thirdquestion'
@@ -23,7 +24,8 @@ import App from './components/Counter'
 
    {/* <Eightquestion/> */}
    {/* <Sevenquestion/> */}
-   <App/>
+   {/* <App/> */}
+    <Toggle/>
   </StrictMode>
 )
 
