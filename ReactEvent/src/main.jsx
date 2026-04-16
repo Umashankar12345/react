@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-
+import App from './components/Counter'
 // import Onequestion from './components/Onequestion'
 // import Secondquestion from './components/Secondquestion'
 // import Thirdquestion from './components/Thirdquestion'
@@ -9,8 +9,8 @@ import './index.css'
 // import Fivequestion from './components/Fivequestion'
 // import Sixquestion from './components/Sixquestion'
 // import Eightquestion from './components/Eightquestion'
-import Sevenquestion from './components/Sevenquestion'
-createRoot(document.getElementById('root')).render(
+// import Sevenquestion from './components/Sevenquestion'
+ createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
     {/* <Onequestion/> */}
@@ -22,7 +22,8 @@ createRoot(document.getElementById('root')).render(
    {/* <Sixquestion/> */}
 
    {/* <Eightquestion/> */}
-   <Sevenquestion/>
+   {/* <Sevenquestion/> */}
+   <App/>
   </StrictMode>
 )
 
