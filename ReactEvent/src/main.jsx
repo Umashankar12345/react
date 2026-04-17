@@ -2,7 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 // import App from './components/Counter'
-import Toggle from './components/Toggle'
+// import Toggle from './components/Toggle'
+import Todolist from './components/Todolist'
 // import Onequestion from './components/Onequestion'
 // import Secondquestion from './components/Secondquestion'
 // import Thirdquestion from './components/Thirdquestion'
@@ -25,7 +26,8 @@ import Toggle from './components/Toggle'
    {/* <Eightquestion/> */}
    {/* <Sevenquestion/> */}
    {/* <App/> */}
-    <Toggle/>
+    {/* <Toggle/> */}
+    <Todolist/>
   </StrictMode>
 )
 
