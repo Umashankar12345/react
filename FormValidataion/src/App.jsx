@@ -75,65 +75,65 @@
 //         const
 
 
-import React,{ useState } from 'react'
+// import React,{ useState } from 'react'
 
-import './App.css'
-function App() {
-const[form , setForm] = useState({
-  email: "",
-  username: "",
-  password: "",
-  contact: "",
-});
-const[error,setError] = useState("");
+// import './App.css'
+// function App() {
+// const[form , setForm] = useState({
+//   email: "",
+//   username: "",
+//   password: "",
+//   contact: "",
+// });
+// const[error,setError] = useState("");
 
-const  handleChange = (e) => {
-  setForm({...form , [e.target.name]:  e.target.value});
-};
-  const handleSubmit  = (e) => {
-    e.preventDefault();
+// const  handleChange = (e) => {
+//   setForm({...form , [e.target.name]:  e.target.value});
+// };
+//   const handleSubmit  = (e) => {
+//     e.preventDefault();
   
 
-  if(/[0-9]/.test(form.username)){
-    setError("username should not contain numbers");
-    return;
-  }
-  if(!form.email.includes("@")){
-    setError("enter valid email");
-    return;
-  }
-  if(form.password.length < 6){
-    setError("password should be at least 6 characters");
-    return;
-  }
-  if(/[@$#%]/. test(form.password)){
-    setError("password should contain at least one special character");
-    return;
-  }
-if(!/^[0-9]{10}$/. test(form.contact)){
-  setError("contact should be 10 digit number");
-  return;
-};
-setError("");
-alert("form submitted successfully");
-}
-  return(
-    <form onSubmit = {handleSubmit}>
-      <input type="text" name = "username" placeholder="Enter username" onChange={handleChange} />
-      <input type="text" name = "email" placeholder="Enter email" onChange={handleChange} />
-      <input type="password" name = "password" placeholder="Enter password" onChange={handleChange} />
-        <input
-        type="text"
-        name="contact"
-        placeholder="Enter contact"
-        onChange={handleChange}
-      />    
+//   if(/[0-9]/.test(form.username)){
+//     setError("username should not contain numbers");
+//     return;
+//   }
+//   if(!form.email.includes("@")){
+//     setError("enter valid email");
+//     return;
+//   }
+//   if(form.password.length < 6){
+//     setError("password should be at least 6 characters");
+//     return;
+//   }
+//   if(/[@$#%]/. test(form.password)){
+//     setError("password should contain at least one special character");
+//     return;
+//   }
+// if(!/^[0-9]{10}$/. test(form.contact)){
+//   setError("contact should be 10 digit number");
+//   return;
+// };
+// setError("");
+// alert("form submitted successfully");
+// }
+//   return(
+//     <form onSubmit = {handleSubmit}>
+//       <input type="text" name = "username" placeholder="Enter username" onChange={handleChange} />
+//       <input type="text" name = "email" placeholder="Enter email" onChange={handleChange} />
+//       <input type="password" name = "password" placeholder="Enter password" onChange={handleChange} />
+//         <input
+//         type="text"
+//         name="contact"
+//         placeholder="Enter contact"
+//         onChange={handleChange}
+//       />    
 
-        <br /> <br />
-        <button type="submit">Submit  </button>      
-        <p>{error}</p>  
-    </form>
-  )
+//         <br /> <br />
+//         <button type="submit">Submit  </button>      
+//         <p>{error}</p>  
+//     </form>
+//   )
 
-}
-export default App
+// }
+// export default App
