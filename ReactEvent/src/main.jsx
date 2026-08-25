@@ -11,6 +11,7 @@ import Todolist from './components/Todolist'
 // import Fivequestion from './components/Fivequestion'
 // import Sixquestion from './components/Sixquestion'
 // import Eightquestion from './components/Eightquestion'
+import TodoApp from './components/TodoApp'
 // import Sevenquestion from './components/Sevenquestion'
  createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -27,6 +28,8 @@ import Todolist from './components/Todolist'
    {/* <Sevenquestion/> */}
    {/* <App/> */}
     {/* <Toggle/> */}
+    <TodoApp/>
+
     <Todolist/>
   </StrictMode>
 )
